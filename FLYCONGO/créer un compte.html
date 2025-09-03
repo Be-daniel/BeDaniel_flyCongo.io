@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Créer un compte</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style3.css">
+</head>
+<body>
+	<header class="header">
+        <div class="divlogo">
+            <label id="Logo" for="logo">FLY CONGO</label>
+        </div>
+
+        <div class="divlinks">
+            <a class="acontact" href="acceuil.html">Acceuil</a>
+            <a class="acontact" href="contactez-nous.html"> contact </a>
+            <a class="acontact" href="info.html"> s'inscrire </a>
+            <a class="acontact" href="connexion.html">connexion</a>
+         </div>
+    </header>
+
+	<form method="post" onSubmit="return validation(this)">
+		<fieldset  class="fie2">
+			<div>
+				<div>
+				<h2>Création du compte</h2>
+				</div>
+				<div>
+					<label for="user">Nom d'utilisateur</label><br>
+					<input type="text" name="user" id="user" placeholder="Entrez votre nom d'utilisateur" required><br>
+				</div>
+				<div>
+					<label for="nom">Nom</label><br>
+					<input type="text" name="nom" id="nom" placeholder="Entrez votre Nom" required><br>
+				</div>
+				<div>
+					<label for="tel">Téléphone</label><br>
+					<input type="tel" name="tel" id="tel" placeholder="Entrez votre numéro de téléphone" required><br>
+				</div>
+				<div>
+					<label for="email">E-Mail</label><br>
+					<input type="email" name="email" id="mail" placeholder="Entrez votre adresse mail" required><br>
+				</div>
+				<div>
+					<label for="mdp1">Mot de passe </label><br>
+					<input type="password" name="mdp1" id="mdp1" placeholder="Entrez votre mot de passe" value="" required><br>
+				</div>
+				<div>
+					<label for="mdp2">Confirmez votre mot de passe</label><br>
+					<input type="password" name="mdp2" id="mdp2" placeholder="confirmez votre mot de passe" value="" required><br>
+				</div>
+					<script language="JavaScript">
+						function validation(f) {
+						  if (f.mdp1.value == '' || f.mdp2.value == '') {
+						    alert('Veuillez entrez le mot de passe');
+						    f.mdp1.focus();
+						    return false;
+						    }
+						  else if (f.mdp1.value != f.mdp2.value) {
+						    alert('les mots de passe ne correspondent pas !');
+						    f.mdp1.focus();
+						    return false;
+						    }
+						  else if (f.mdp1.value == f.mdp2.value) {
+						    return true;
+						    }
+						  else {
+						    f.mdp1.focus();
+						    return false;
+						    }
+						  }
+					</script>
+
+				<a href="#"><button>Créer un compte</button></a>
+			</div>
+		</fieldset>
+
+	</form>
+	 <footer class="footer">
+        <a class="afooter" href="acceuil.html">Acceuil</a>
+        <a class="afooter" href="contactez-nous.html">contactez nous </a>
+        <a class="afooter" href="info.html">Créer un compte</a>
+        <br>
+        <!--Copyright by <strong class="signature"> daniel bele</strong>  tous droits réservés-->
+    </footer>
+</body>
+</html>
